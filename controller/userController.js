@@ -46,7 +46,7 @@ exports.login = BigPromise(async(req,res,next)=>{
 
     if(!email || !password)
     {
-        return next(new CustomError('please provide emial and password',400));
+        return next(new CustomError('please provide email and password',400));
     }
 // checking the user in DB
     const user =await User.findOne({email}).select("+password");
