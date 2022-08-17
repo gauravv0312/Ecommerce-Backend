@@ -15,11 +15,6 @@ const userSchema = new mongoose.Schema({
         validate: [validator.isEmail,"Please enter email in correct format"],
         unique: true,
     },
-    name:{
-        type: String,
-        required: [true,"Please provide a name"],
-        maxlength: [40,"Name should be under 40 characters"],
-    },
     password:{
         type: String,
         required: [true,"Please provide a password"],

@@ -151,7 +151,7 @@ exports.getLoggedInuserDetails = BigPromise(async(req,res,next)=>{
         success: true,
         user,
     });
-})
+});
 
 exports.changePassword = BigPromise(async(req,res,next)=>{
     const userId = req.user.id;
@@ -167,4 +167,4 @@ exports.changePassword = BigPromise(async(req,res,next)=>{
     await user.save();
 
     CookieToken(user,res);
-})
+});
